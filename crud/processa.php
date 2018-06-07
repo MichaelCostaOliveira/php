@@ -7,7 +7,7 @@ extract($_POST);
 //$resultado1_usuario = mysqli_query($conn, $resultA1_usuario);
 //$retorn= mysqli_facht_array($resultado1_usuario)
 
-if(strlen($nome)>0 && strlen($email)>0 && strlen($senha)>0 && /*$retorn=0*/){
+if(strlen($nome)>0 && strlen($email)>0 && strlen($senha)>0 /*&& $retorn=0*/){
 	$result_usuario = "INSERT INTO crud_inserir (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 		$_SESSION['msg'] = "<p style='color:green;'>Usuário cadastrado com sucesso!</p>";
