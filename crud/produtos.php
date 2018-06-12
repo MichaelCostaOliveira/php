@@ -32,7 +32,7 @@ include_once("conexao.php");
                     echo"<td><a href='deletar.php?id=$produto[id]'>Deletar</a></td>";
                     echo"</tr>";
 				}
-//MYSQLI_FACTH_ASSOC BUSCA USUARIO PELO ASOCIATIVO OU PELA CHAVE
+//MYSQLI_FECTH_ASSOC BUSCA USUARIO PELO ASOCIATIVO OU PELA CHAVE
     	?>
     </table>
         <h1>CADASTRE AQUI UM NOVO PRODUTO</h1>
