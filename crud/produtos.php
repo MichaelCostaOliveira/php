@@ -39,7 +39,7 @@ include_once("conexao.php");
         <form action="inserir_produto.php" method="post">
             Produto:<input type="text" name="produto" placeholder="Nome do produto"><br>
             Preço:<input type="text" name="valor" placeholder="Preço do produto "><br>
-            Imagem:<input type="text" name="imagem" placeholder="EX:CRUD/crud/imagem.jpg"><br>
+            Imagem:<input type="file" name="imagem"><br>
         <button>Cadastrar</button>
         </form>
     </body>
