@@ -15,4 +15,10 @@ session_start();
     /*$inserir_produto = "INSERT INTO produtos (nome, valor, imagem) VALUES ('$produto', '$valor', '$imagem')";
     $insert = mysqli_query($conn, $inserir_produto);
     header("location: produtos.php");*/
+
+//upload_max_filesize serve para ajustar o tamanho dos arquivos para upload
+
+
 ?>
+
+
