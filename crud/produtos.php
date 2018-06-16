@@ -44,5 +44,23 @@ include_once("conexao.php");
         </form>
     </body>
     </html>
-
-    
+//////////////////////////////////////////////////////////////////
+    <?php
+    		$consulta = "select * from produtos";
+			$retorno = mysqli_query($conn,$consulta);
+			echo "<table border='1'>";
+				while($produto = mysqli_fetch_assoc($retorno)){
+					echo"<tr>";
+					echo "<td>". $produto['id']."</td>";
+					
+					echo  "<td>". $produto['nome']."</td>";
+					
+					echo  "<td>" . $produto['valor']."</td>";
+					
+					echo "<td><img width = '150' heigth= '100' src='imagen\\".$produto['imagem']."'></td>";
+                    echo"<td><a href='editar.php?id=". $produto['id']."'>Editar</a></td>";
+                    echo"<td><a href='deletar.php?id=". $produto['id']."'>Deletar</a></td>";
+                    echo"</tr>";
+				}
+//MYSQLI_FECTH_ASSOC BUSCA USUARIO PELO ASOCIATIVO OU PELA CHAVE
+    	?>
