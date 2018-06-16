@@ -5,11 +5,14 @@ session_start();
     }
     include_once("conexao.php");
     
-    extract($_POST);
-	$caminho = "CRUD/crud/imagen/" . $imagem ;
-	$imagem2 = $caminho;
+	$imgBanco = $_FILES['imagem']['name'];
+    $caminhoPasta = "C:\\xampp\\htdocs\\CRUD\\crud\\imagen\\".$_FILES['imagem']['name'];
+   	
+
+  
+
 	
-    $inserir_produto = "INSERT INTO produtos (nome, valor, imagem) VALUES ('$produto', '$valor', '$imagem2')";
+    $inserir_produto = "INSERT INTO produtos (nome, valor, imagem) VALUES ('$produto', '$valor', '$imgBanco')";
     $insert = mysqli_query($conn, $inserir_produto);
     header("location: produtos.php");
     /*$inserir_produto = "INSERT INTO produtos (nome, valor, imagem) VALUES ('$produto', '$valor', '$imagem')";
