@@ -5,14 +5,14 @@ include_once("conexao.php");
 extract($_POST);
 
 if(isset($nome)&& isset($senha)){
-    //verificar se existe esse banco
+    //verificar se existe nesse banco
     $sql = "select * from crud_inserir where nome = '$nome' and senha ='$senha'";
 
     $rs = mysqli_query($conn,$sql);
 
         if(mysqli_num_rows($rs)>0){
 
-            //variave $_SESSION unica que para usar precisa de um star antes
+            //variave $_SESSION unica que para usar precisa de um start antes
         $_SESSION['logado']=TRUE;
 
         if($lembrar){
